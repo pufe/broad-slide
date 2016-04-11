@@ -1,0 +1,17 @@
+<div>
+  <%= form_tag '/update' do %>
+    <% @slide_list.each do |slide| %>
+      <div>
+        <%= label_tag 'Endereço:' %>
+        <%= text_field_tag 'slide[][url]', slide.url %>
+        <%= button_tag 'Remover' %>
+      </div>
+    <% end %>
+    <div>
+      <%= button_tag 'adicionar slide' %>
+    </div>
+    <div>
+      <%= password_field_tag 'password' %>
+    </div>
+  <% end %>
+</div>
